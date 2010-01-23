@@ -1,0 +1,67 @@
+input, body, table td, select, .gwt-Button {
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-size: 17px;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #777777;
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+.gwt-TextBox {	
+	height: 28px;
+}
+
+.gwt-TextBox-date {
+	width: 190px;
+}
+
+.gwt-TextBox-name {
+	width: 240px;
+}
+
+.hasBorder {
+	border: dashed;
+	border-color: gray;
+	padding: 10px;	
+}
+
+.helpPanel .header, .helpPanel .header a, .helpPanel .header td {
+	cursor: pointer;
+	text-decoration: none;	
+}
+
+#helpDiv {
+	margin-left: 20px;
+	width: 600px;
+}
+
+#currentDiv {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#addDiv {
+	margin-left: 20px;
+}
+
+.currentEventsTable {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.currentEventsTable td {
+	border-width: 1px;
+	border-style: dotted;
+	padding: 0px 3px 0px 3px;
+}
+
+.tableHeader {
+	font-size: 18px;
+}
+

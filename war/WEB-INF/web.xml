@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>eventServlet</servlet-name>
+    <servlet-class>com.tardytron.server.EventServiceImpl</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>wakeupServlet</servlet-name>
+    <servlet-class>com.tardytron.server.ReminderService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>testEmailServlet</servlet-name>
+    <servlet-class>com.tardytron.server.TestEmailServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>eventServlet</servlet-name>
+    <url-pattern>/tardytron/events</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wakeupServlet</servlet-name>
+    <url-pattern>/tardytron/wakeup</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>testEmailServlet</servlet-name>
+    <url-pattern>/tardytron/testemail</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Require user to log in -->
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/Tardytron.html</url-pattern>
+      <url-pattern>/events/**</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- Only admins can wake up Tardytron -->
+      <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/tardytron/wakeup</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+</web-app>
