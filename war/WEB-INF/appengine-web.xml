@@ -24,6 +24,11 @@
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
   </system-properties>
 
+  <!-- Added so emails don't mangle utf-8 -->
+  <env-variables>
+    <env-var name="DEFAULT_ENCODING" value="UTF-8" />
+  </env-variables>
+
   <!--
     HTTP Sessions are disabled by default. To enable HTTP sessions specify:
 
